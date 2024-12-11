@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #800080; /* Cor roxa */
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+main {
+    margin: 2em;
+    padding: 2em;
+    background-color: white;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+button {
+    background-color: #800080; /* Cor roxa */
+    color: white;
+    border: none;
+    padding: 0.5em;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #9932CC; /* Tom mais claro de roxo */
+}
+
+#resultados {
+    margin-top: 1em;
+    padding: 1em;
+    background-color: #e7e0ec; /* Tom suave de roxo */
+    border-radius: 8px;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #800080; /* Cor roxa */
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

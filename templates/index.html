@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Números</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo à Lista de Números</h1>
+    </header>
+    <main>
+        <form method="post" action="/process">
+            <label for="numeros">Digite uma lista de números inteiros separados por espaço:</label>
+            <input type="text" id="numeros" name="numeros" required>
+            <button type="submit">Enviar</button>
+        </form>
+        {% if resultados %}
+            <div id="resultados">
+                <p>Lista válida: {{ resultados.lista }}</p>
+                <p>Lista ordenada como tupla: {{ resultados.tupla }}</p>
+                <p>Maior número: {{ resultados.maior }}</p>
+                <p>Menor número: {{ resultados.menor }}</p>
+                <p>Média dos números: {{ resultados.media }}</p>
+            </div>
+        {% endif %}
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+    </main>
+    <footer>
+        <p>&copy; 2024 Lista de Números</p>
+    </footer>
+</body>
+</html>
